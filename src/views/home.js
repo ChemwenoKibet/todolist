@@ -1,21 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import TodoList from "../myComponent/Todolist";
+import axios from "axios";
 
 function Home() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      title: "Learn React",
-      description: "Introduction to React",
-      status:false
-    },
-    {
-      id: 2,
-      title: "Learn React",
-      description: "Introduction to React",
-      status:false
-    },
-  ]);
+  const values = useContext(TodoContext)
+  }
 
   // new todo state
   const [newTodo,setNewTodo] = useState("")
@@ -48,6 +37,21 @@ function Home() {
       <TodoList todos={todos} />
     </div>
   );
-}
+  }
 
 export default Home;
+
+
+
+ // {
+    //   id: 1,
+    //   title: "Learn React",
+    //   description: "Introduction to React",
+    //   status:false
+    // },
+    // {
+    //   id: 2,
+    //   title: "Learn React",
+    //   description: "Introduction to React",
+    //   status:false
+    // },
